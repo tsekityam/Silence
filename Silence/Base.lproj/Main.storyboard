@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -102,9 +103,22 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEg-bs-mdC">
+                                <rect key="frame" x="548" y="52" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="Be0-DG-Ca7"/>
+                                    <constraint firstAttribute="height" constant="32" id="Bve-kP-UtC"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="GitHub-Mark"/>
+                                <connections>
+                                    <action selector="openGitHub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="15z-IG-AbN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="UEg-bs-mdC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="9X1-q5-n8e"/>
+                            <constraint firstItem="UEg-bs-mdC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ghp-O7-5v0"/>
                             <constraint firstItem="itt-TO-unl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mma-dO-KSu"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JeQ-bl-ZrC" secondAttribute="bottom" constant="36" id="PoP-Z7-rCW"/>
                             <constraint firstItem="MzV-UQ-Ybt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XFD-hn-7jd"/>
@@ -120,6 +134,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GitHub-Mark" width="32" height="32"/>
         <image name="ic_apple_safari_grey600_36dp" width="72" height="72"/>
         <image name="ic_settings_grey600_36dp" width="72" height="72"/>
         <image name="ic_toggle_switch_grey600_36dp" width="72" height="72"/>

@@ -33,5 +33,8 @@ class ViewController: UIViewController {
         UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
     }
 
+    @IBAction func openGitHub(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://github.com/tsekityam/Silence")!)
+    }
 }
 
