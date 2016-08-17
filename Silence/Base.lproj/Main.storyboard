@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Silence" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,112 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeQ-bl-ZrC">
+                                <rect key="frame" x="216" y="519" width="167" height="45"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Open Settings"/>
+                                <connections>
+                                    <action selector="openSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6wt-St-DDg"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MzV-UQ-Ybt">
+                                <rect key="frame" x="140" y="136" width="320" height="328"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aD-CH-qgV">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="328"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Select Safari, then click Content Blocker" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDd-Tz-EQV">
+                                                <rect key="frame" x="100" y="141" width="200" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="pRf-xE-bLr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Enable Silence" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myF-q1-MgG">
+                                                <rect key="frame" x="100" y="260" width="200" height="23"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_apple_safari_grey600_36dp" translatesAutoresizingMaskIntoConstraints="NO" id="sLh-U2-mr8">
+                                                <rect key="frame" x="20" y="128" width="72" height="72"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_toggle_switch_grey600_36dp" translatesAutoresizingMaskIntoConstraints="NO" id="ZaY-Nl-UiL">
+                                                <rect key="frame" x="20" y="236" width="72" height="72"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Go to Settings App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaF-eC-er1">
+                                                <rect key="frame" x="100" y="44" width="200" height="23"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_settings_grey600_36dp" translatesAutoresizingMaskIntoConstraints="NO" id="reY-Pi-kQe">
+                                                <rect key="frame" x="20" y="20" width="72" height="72"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="ZaY-Nl-UiL" firstAttribute="top" secondItem="sLh-U2-mr8" secondAttribute="bottom" constant="36" id="20z-kO-mD1"/>
+                                            <constraint firstAttribute="trailing" secondItem="myF-q1-MgG" secondAttribute="trailing" constant="20" symbolic="YES" id="6Ft-2f-HFs"/>
+                                            <constraint firstAttribute="trailing" secondItem="aaF-eC-er1" secondAttribute="trailing" constant="20" symbolic="YES" id="7ml-yJ-izm"/>
+                                            <constraint firstItem="reY-Pi-kQe" firstAttribute="top" secondItem="3aD-CH-qgV" secondAttribute="top" constant="20" symbolic="YES" id="D7Y-Ry-UOz"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZaY-Nl-UiL" secondAttribute="bottom" constant="20" symbolic="YES" id="DMd-Mg-U8W"/>
+                                            <constraint firstItem="aaF-eC-er1" firstAttribute="centerY" secondItem="reY-Pi-kQe" secondAttribute="centerY" id="EoT-l4-kXQ"/>
+                                            <constraint firstItem="sLh-U2-mr8" firstAttribute="leading" secondItem="3aD-CH-qgV" secondAttribute="leading" constant="20" symbolic="YES" id="GEZ-bN-4DF"/>
+                                            <constraint firstAttribute="trailing" secondItem="myF-q1-MgG" secondAttribute="trailing" constant="20" symbolic="YES" id="H1h-Rx-cMi"/>
+                                            <constraint firstAttribute="trailing" secondItem="oDd-Tz-EQV" secondAttribute="trailing" constant="20" symbolic="YES" id="Ivi-9P-nt0"/>
+                                            <constraint firstItem="aaF-eC-er1" firstAttribute="leading" secondItem="reY-Pi-kQe" secondAttribute="trailing" constant="8" symbolic="YES" id="JTh-vA-36q"/>
+                                            <constraint firstItem="ZaY-Nl-UiL" firstAttribute="leading" secondItem="3aD-CH-qgV" secondAttribute="leading" constant="20" symbolic="YES" id="LtT-gl-n7R"/>
+                                            <constraint firstItem="ZaY-Nl-UiL" firstAttribute="width" secondItem="sLh-U2-mr8" secondAttribute="width" id="U9p-r5-z5J"/>
+                                            <constraint firstItem="sLh-U2-mr8" firstAttribute="width" secondItem="reY-Pi-kQe" secondAttribute="width" id="XV6-ly-My8"/>
+                                            <constraint firstItem="oDd-Tz-EQV" firstAttribute="leading" secondItem="sLh-U2-mr8" secondAttribute="trailing" constant="8" symbolic="YES" id="bAJ-u8-6nx"/>
+                                            <constraint firstItem="myF-q1-MgG" firstAttribute="leading" secondItem="ZaY-Nl-UiL" secondAttribute="trailing" constant="8" symbolic="YES" id="fAa-b2-e8u"/>
+                                            <constraint firstItem="sLh-U2-mr8" firstAttribute="top" secondItem="reY-Pi-kQe" secondAttribute="bottom" constant="36" id="hol-4T-rDB"/>
+                                            <constraint firstItem="myF-q1-MgG" firstAttribute="centerY" secondItem="ZaY-Nl-UiL" secondAttribute="centerY" id="kmD-aQ-SBo"/>
+                                            <constraint firstAttribute="trailing" secondItem="oDd-Tz-EQV" secondAttribute="trailing" constant="20" symbolic="YES" id="tqj-fS-Sv9"/>
+                                            <constraint firstAttribute="trailing" secondItem="aaF-eC-er1" secondAttribute="trailing" constant="20" symbolic="YES" id="wAD-F2-Djs"/>
+                                            <constraint firstItem="reY-Pi-kQe" firstAttribute="leading" secondItem="3aD-CH-qgV" secondAttribute="leading" constant="20" symbolic="YES" id="wZz-Pb-USl"/>
+                                            <constraint firstItem="oDd-Tz-EQV" firstAttribute="centerY" secondItem="sLh-U2-mr8" secondAttribute="centerY" id="yTO-TX-et1"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="wAD-F2-Djs"/>
+                                                <exclude reference="tqj-fS-Sv9"/>
+                                                <exclude reference="H1h-Rx-cMi"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's remove the noise…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itt-TO-unl">
+                                <rect key="frame" x="186.5" y="102.5" width="227" height="25.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="itt-TO-unl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mma-dO-KSu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JeQ-bl-ZrC" secondAttribute="bottom" constant="36" id="PoP-Z7-rCW"/>
+                            <constraint firstItem="MzV-UQ-Ybt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XFD-hn-7jd"/>
+                            <constraint firstItem="MzV-UQ-Ybt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jK1-CV-XQZ"/>
+                            <constraint firstItem="JeQ-bl-ZrC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vQd-jK-k6m"/>
+                            <constraint firstItem="MzV-UQ-Ybt" firstAttribute="top" secondItem="itt-TO-unl" secondAttribute="bottom" constant="8" symbolic="YES" id="vum-pM-0bA"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="321" y="366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_apple_safari_grey600_36dp" width="72" height="72"/>
+        <image name="ic_settings_grey600_36dp" width="72" height="72"/>
+        <image name="ic_toggle_switch_grey600_36dp" width="72" height="72"/>
+    </resources>
 </document>
