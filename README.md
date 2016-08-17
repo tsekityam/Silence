@@ -8,7 +8,7 @@ The blocker list used in the app is based on the following host list:
 | ---------------------------- |:-------------:|
 | https://adaway.org/hosts.txt | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
 
-The host file is converted to blockList.json by a simple [python script](https://gist.github.com/tsekityam/ce64df36f84b2b87851b4b17315291b9)
+The host file is converted to blockList.json by a simple [python script](https://gist.github.com/tsekityam/ce64df36f84b2b87851b4b17315291b9) with the following command:
 
     $ python convertor.py hosts.txt
 
